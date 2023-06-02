@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@nimec/eslint-config",
+  "version": "1.0.0",
+  "description": "My person eslint config",
+  "main": "src/index.cjs",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "eslint-config"
+  ],
+  "author": "nimec <nimec01@proton.me>",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": ">= 8",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  },
+  "devDependencies": {
+    "@nimec/prettier-config": "^1.0.0",
+    "eslint": "^8.41.0",
+    "prettier": "^2.8.8"
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-no-secrets": "^0.8.9",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-sonarjs": "^0.19.0",
+    "eslint-plugin-unicorn": "^47.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0"
+  },
+  "prettier": "@nimec/prettier-config"
+}
