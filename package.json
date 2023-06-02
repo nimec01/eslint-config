@@ -3,7 +3,7 @@
   "name": "@nimec/eslint-config",
   "version": "1.0.0",
   "description": "My person eslint config",
-  "main": "src/index.cjs",
+  "main": "index.js",
   "keywords": [
     "eslint",
     "eslintconfig",

@@ -1,12 +1,12 @@
 const {
   base: basePlugins,
   alwaysLast: alwaysLastPlugins,
-} = require('./lib/plugins.cjs');
+} = require('./lib/plugins');
 const {
   base: baseConfigs,
   alwaysLast: alwaysLastConfigs,
-} = require('./lib/configs.cjs');
-const { base: baseRules } = require('./lib/rules.cjs');
+} = require('./lib/configs');
+const { base: baseRules } = require('./lib/rules');
 
 module.exports = {
   ignorePatterns: ['node_modules/', 'dist/', 'build/'],
