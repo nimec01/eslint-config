@@ -1,8 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/package",
   "name": "@nimec/eslint-config",
-  "version": "1.0.0",
-  "description": "My person eslint config",
+  "version": "0.0.0-development",
+  "description": "My personal eslint config",
   "main": "index.js",
   "keywords": [
     "eslint",
@@ -11,6 +11,10 @@
   ],
   "author": "nimec <nimec01@proton.me>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nick46000/eslint-config.git"
+  },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.59.8",
     "@typescript-eslint/parser": "^5.59.8",
@@ -24,7 +28,8 @@
   "devDependencies": {
     "@nimec/prettier-config": "^1.0.0",
     "eslint": "^8.41.0",
-    "prettier": "^2.8.8"
+    "prettier": "^2.8.8",
+    "semantic-release": "^21.0.3"
   },
   "dependencies": {
     "eslint-config-airbnb-base": "^15.0.0",
