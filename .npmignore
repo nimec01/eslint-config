@@ -1,3 +1,5 @@
 .eslint*
 test/
 .vscode/
+.github/
+.releaserc.json
