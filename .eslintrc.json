@@ -2,6 +2,11 @@
   "extends": "./base",
   "rules": {
     "unicorn/prefer-module": "off",
-    "unicorn/filename-case": "off"
+    "unicorn/filename-case": "off",
+    "global-require": "off",
+    "import/no-dynamic-require": "off"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2022
   }
 }
