@@ -92,7 +92,7 @@ $ pnpm add -D eslint @nimec/eslint-config @typescript-eslint/eslint-plugin @type
 
 Update your `.eslintrc` to extend this config. This will automatically determine your environment and select the corresponding flavor.
 
-```json
+```plain
 {
   ...,
   "extends": [
@@ -107,7 +107,7 @@ Update your `.eslintrc` to extend this config. This will automatically determine
 
 Update your `.eslintrc` to extend this config.
 
-```json
+```plain
 {
   ...,
   "extends": [
@@ -124,7 +124,7 @@ Update your `.eslintrc` to extend this config.
 
 When using one of these flavors, you need to add the `parserOptions` key to your eslint config. Here is an example:
 
-```json
+```plain
 {
   ...,
   "parserOptions": {
