@@ -27,7 +27,7 @@ jobs:
           check-latest: true
 
       - name: Install dependencies
-        run: npm isntall
+        run: npm install
 
       - name: Release
         env:

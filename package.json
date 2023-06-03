@@ -15,6 +15,9 @@
     "type": "git",
     "url": "https://github.com/Nick46000/eslint-config.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.59.8",
     "@typescript-eslint/parser": "^5.59.8",
