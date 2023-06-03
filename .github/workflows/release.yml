@@ -12,10 +12,9 @@ permissions:
   pull-requests: write
 
 jobs:
-  cd:
+  release:
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
-    needs: ci
 
     steps:
       - name: Checkout
