@@ -18,7 +18,11 @@ const {
 
 module.exports = {
   parser: '@typescript-eslint/parser',
-
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   extends: [
     ...baseConfigs,
     ...reactConfigs,
