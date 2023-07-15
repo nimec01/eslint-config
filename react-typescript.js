@@ -8,7 +8,7 @@ const {
   base: baseConfigs,
   react: reactConfigs,
   typescript: typescriptConfigs,
-  alwaysLastTypescript: alwaysLastTypescriptConfigs,
+  alwaysLastReactTypescript: alwaysLastReactTypescriptConfigs,
 } = require('./lib/configs');
 const {
   base: baseRules,
@@ -27,7 +27,7 @@ module.exports = {
     ...baseConfigs,
     ...reactConfigs,
     ...typescriptConfigs,
-    ...alwaysLastTypescriptConfigs,
+    ...alwaysLastReactTypescriptConfigs,
   ],
   plugins: [
     ...basePlugins,
