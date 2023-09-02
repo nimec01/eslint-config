@@ -97,7 +97,7 @@ Update your `.eslintrc` to extend this config. This will automatically determine
   ...,
   "extends": [
     ...,
-    "@nimec/eslint-plugin"
+    "@nimec/eslint-config"
   ],
   ...
 }
@@ -112,7 +112,7 @@ Update your `.eslintrc` to extend this config.
   ...,
   "extends": [
     ...,
-    "@nimec/eslint-plugin/<flavor>"
+    "@nimec/eslint-config/<flavor>"
   ],
   ...
 }
@@ -133,7 +133,7 @@ When using one of these flavors, you need to add the `parserOptions` key to your
   },
   "extends": [
     ...,
-    "@nimec/eslint-plugin/typescript"
+    "@nimec/eslint-config/typescript"
   ],
   ...
 }
