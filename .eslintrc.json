@@ -4,7 +4,9 @@
     "unicorn/prefer-module": "off",
     "unicorn/filename-case": "off",
     "global-require": "off",
-    "import/no-dynamic-require": "off"
+    "import/no-dynamic-require": "off",
+    "sonarjs/cognitive-complexity": "off",
+    "unicorn/no-array-reduce": "off"
   },
   "parserOptions": {
     "ecmaVersion": 2022
