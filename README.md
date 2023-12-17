@@ -118,6 +118,36 @@ Update your `.eslintrc` to extend this config.
 }
 ```
 
+### Using `createConfig`
+
+You can use the `createConfig` function exported by `@nimec01/eslint-config/lib/utils` to generate a customized function. You can use the following settings to customize the result:
+
+| Property          | Allowed values / type              | Default value | Description                                                                                                                                                          |
+| --- | --- | --- | --- 
+| typescript        | `true`, `false`                    | `false`       | Generate a config optimized for typescript                                                                                                                           |
+| react             | `true`, `false`                    | `false`       | Generate a config optimized for react                                                                                                                                |
+| prettier          | `true`, `false`                    | `true`        | Include `prettier`                                                                                                                                                   |
+| ignoreConfigs     | `String[]`                         | `[]`          | Ignore default config(s)                                                                                                                                             |
+| ignorePlugins     | `String[]`                         | `[]`          | Ignore default plugin(s)                                                                                                                                             |
+| ignoreRules       | `String[]`                         | `[]`          | Ignore default rule(s)                                                                                                                                               |
+| extraConfigs      | `String[]`                         | `[]`          | Config(s) to include                                                                                                                                                 |
+| extraPlugins      | `String[]`                         | `[]`          | Plugin(s) to include                                                                                                                                                 |
+| extraRules        | `{[key: String]: any}`              | `{}`          | Rule(s) to include                                                                                                                                                   |
+| overrideConfigs   | `String[]`, `undefined`            | `undefined`   | Override config(s)                                                                                                                                                   |
+| overridePlugins   | `String[]`, `undefined`            | `undefined`   | Override plugin(s)                                                                                                                                                   |
+| overrideRules     | `{[key: String]: any}`, `undefined` | `undefined`   | Override rule(s)                                                                                                                                                     |     |
+| overrideWipeRules | `true`, `false`                    | `false`       | Determines whether `overrideRules` keeps all rules not present in `overrideRules` or not. Setting this to `true` will only include rules present in `overrideRules`. |
+
+Example: Default config without `prettier`
+
+```js
+const { createConfig } = require('@nimec01/eslint-config/lib/utils');
+
+module.exports = createConfig({
+  prettier: false,
+});
+```
+
 ## Flavor specific configuration
 
 ### typescript / react-typescript
