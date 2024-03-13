@@ -10,7 +10,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  release:
+  test:
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
 
