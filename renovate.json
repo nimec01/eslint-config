@@ -5,5 +5,10 @@
   ],
   "addLabels": [
     "dependencies"
+  ],
+  "automerge": true,
+  "automergeStrategy": "squash",
+  "automergeSchedule": [
+    "every weekend"
   ]
 }
