@@ -59,31 +59,31 @@ You need to install some peer dependencies based on the flavor that you want to 
 **Install (npm without/with peer dependencies)**:
 
 ```bash
-$ npm install --save-dev eslint @nimec/eslint-config
+npm install --save-dev eslint @nimec/eslint-config
 ```
 
 ```bash
-$ npm install --save-dev eslint @nimec/eslint-config @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-airbnb eslint-config-airbnb-typescript eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
+npx install-peerdeps -D @nimec/eslint-config
 ```
 
 **Install (yarn without/with peer dependencies)**:
 
 ```bash
-$ yarn add -D eslint @nimec/eslint-config
+yarn add -D eslint @nimec/eslint-config
 ```
 
 ```bash
-$ yarn add -D eslint @nimec/eslint-config @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-airbnb eslint-config-airbnb-typescript eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
+npx install-peerdeps --yarn -D @nimec/eslint-config
 ```
 
 **Install (pnpm without/with peer dependencies)**:
 
 ```bash
-$ pnpm add -D eslint @nimec/eslint-config
+pnpm add -D eslint @nimec/eslint-config
 ```
 
 ```bash
-$ pnpm add -D eslint @nimec/eslint-config @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-airbnb eslint-config-airbnb-typescript eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
+npx install-peerdeps --pnpm -D @nimec/eslint-config
 ```
 
 ## Extending this config
@@ -120,7 +120,7 @@ Update your `.eslintrc` to extend this config.
 
 ### Using `createConfig`
 
-You can use the `createConfig` function exported by `@nimec01/eslint-config/lib/utils` to generate a customized function. You can use the following settings to customize the result:
+You can use the `createConfig` function exported by `@nimec/eslint-config/lib/utils` to generate a customized function. You can use the following settings to customize the result:
 
 | Property          | Allowed values / type              | Default value | Description                                                                                                                                                          |
 | --- | --- | --- | --- 
@@ -141,7 +141,7 @@ You can use the `createConfig` function exported by `@nimec01/eslint-config/lib/
 Example: Default config without `prettier`
 
 ```js
-const { createConfig } = require('@nimec01/eslint-config/lib/utils');
+const { createConfig } = require('@nimec/eslint-config/lib/utils');
 
 module.exports = createConfig({
   prettier: false,
