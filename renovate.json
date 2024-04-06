@@ -6,9 +6,16 @@
   "addLabels": [
     "dependencies"
   ],
-  "automerge": true,
-  "automergeStrategy": "squash",
-  "automergeSchedule": [
-    "every weekend"
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "minor"
+      ],
+      "automerge": true,
+      "automergeStrategy": "squash",
+      "automergeSchedule": [
+        "every weekend"
+      ]
+    }
   ]
 }
