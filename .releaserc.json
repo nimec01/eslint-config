@@ -9,7 +9,7 @@
     [
       "@semantic-release/release-notes-generator",
       {
-        "preset": "",
+        "preset": "conventionalcommits",
         "presetConfig": {
           "types": [
             {
@@ -67,6 +67,7 @@
         }
       }
     ],
+    "@semantic-release/changelog",
     "@semantic-release/npm",
     "@semantic-release/github"
   ],
