@@ -21,6 +21,7 @@ You need to install some peer dependencies based on the flavor that you want to 
 - eslint-plugin-sonarjs
 - eslint-plugin-unicorn
 - eslint-plugin-unused-imports
+- @cspell/eslint-plugin
 
 ### `react` - React using Javascript Only
 
