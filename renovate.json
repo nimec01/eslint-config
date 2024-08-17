@@ -5,17 +5,5 @@
   ],
   "addLabels": [
     "dependencies"
-  ],
-  "packageRules": [
-    {
-      "matchUpdateTypes": [
-        "patch"
-      ],
-      "automerge": true,
-      "automergeStrategy": "squash",
-      "automergeSchedule": [
-        "every weekend"
-      ]
-    }
   ]
 }
