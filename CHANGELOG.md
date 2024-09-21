@@ -1,3 +1,11 @@
+## [2.0.0-beta.2](https://github.com/nimec01/eslint-config/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2024-09-21)
+
+### Bug Fixes
+
+* build failing ([4200fbd](https://github.com/nimec01/eslint-config/commit/4200fbd2c2f4fa5afe71c60b5a6b656aef721d7e))
+* followup ([096bdd3](https://github.com/nimec01/eslint-config/commit/096bdd3d2f7d2d53481714b195765435833a25aa))
+* provide es and cjs files ([85a1446](https://github.com/nimec01/eslint-config/commit/85a144691b3f9c4fc71751fe9805184b4ea5ff8d))
+
 ## [2.0.0-beta.1](https://github.com/nimec01/eslint-config/compare/v1.4.0-beta.1...v2.0.0-beta.1) (2024-09-21)
 
 ### ⚠ BREAKING CHANGES
