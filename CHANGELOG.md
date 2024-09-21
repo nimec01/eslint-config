@@ -1,3 +1,9 @@
+## [2.0.0-beta.3](https://github.com/nimec01/eslint-config/compare/v2.0.0-beta.2...v2.0.0-beta.3) (2024-09-21)
+
+### Bug Fixes
+
+* file provisioning ([c32bc23](https://github.com/nimec01/eslint-config/commit/c32bc237cc400f2631a8b97a28953fb6490c13f0))
+
 ## [2.0.0-beta.2](https://github.com/nimec01/eslint-config/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2024-09-21)
 
 ### Bug Fixes
