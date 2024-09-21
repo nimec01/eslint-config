@@ -1,9 +1,0 @@
-eslint.config.js
-test/
-.vscode/
-.github/
-.releaserc.json
-.cspell.json
-renovate.json
-tests/
-.prettierignore
