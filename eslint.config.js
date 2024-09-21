@@ -1,6 +1,13 @@
-import baseConfig from './src/base.js';
+import configs from './src/index.js';
 
 export default [
-  ...baseConfig,
-  { ignores: ['**/tests/base', '**/tests/typescript', '**/dist'] },
+  ...configs.configs.base,
+  {
+    ignores: [
+      '**/tests/base',
+      '**/tests/typescript',
+      '**/tests/react',
+      '**/dist',
+    ],
+  },
 ];
