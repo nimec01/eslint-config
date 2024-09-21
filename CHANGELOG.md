@@ -1,3 +1,13 @@
+## [2.0.0-beta.1](https://github.com/nimec01/eslint-config/compare/v1.4.0-beta.1...v2.0.0-beta.1) (2024-09-21)
+
+### ⚠ BREAKING CHANGES
+
+* major release
+
+### Features
+
+* major release ([a03e7d6](https://github.com/nimec01/eslint-config/commit/a03e7d683038e1ba33aee5a07bc5a9f6792e9fe4))
+
 ## [1.4.0-beta.1](https://github.com/nimec01/eslint-config/compare/v1.3.1...v1.4.0-beta.1) (2024-09-21)
 
 ### Features
