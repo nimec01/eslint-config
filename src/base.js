@@ -51,6 +51,20 @@ export default [
   sonarjs.configs.recommended,
   // import-x
   importX.flatConfigs.recommended,
+  {
+    settings: {
+      'import-x/resolver': {
+        node: {
+          extensions: ['.js', '.cjs', '.mjs'],
+          moduleDirectory: ['node_modules', 'src'],
+        },
+        typescript: {
+          extensions: ['.js', '.jsx', '.ts', '.tsx'],
+          moduleDirectory: ['node_modules', 'src'],
+        },
+      },
+    },
+  },
   // prettier
   prettierConfigRecommended,
   /**
