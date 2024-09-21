@@ -1,11 +1,11 @@
-import eslint from '@eslint/js';
-import globals from 'globals';
-import noSecrets from 'eslint-plugin-no-secrets';
 import cspell from '@cspell/eslint-plugin';
-import prettierConfigRecommended from 'eslint-plugin-prettier/recommended';
-import unicorn from 'eslint-plugin-unicorn';
+import eslint from '@eslint/js';
 import importX from 'eslint-plugin-import-x';
+import noSecrets from 'eslint-plugin-no-secrets';
+import prettierConfigRecommended from 'eslint-plugin-prettier/recommended';
 import sonarjs from 'eslint-plugin-sonarjs';
+import unicorn from 'eslint-plugin-unicorn';
+import globals from 'globals';
 
 export default [
   eslint.configs.recommended,
@@ -59,6 +59,7 @@ export default [
   {
     rules: {
       'no-console': 'error',
+      'import-x/first': 'error',
     },
   },
 ];
