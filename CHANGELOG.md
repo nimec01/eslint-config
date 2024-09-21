@@ -1,3 +1,17 @@
+## [2.0.0-beta.4](https://github.com/nimec01/eslint-config/compare/v2.0.0-beta.3...v2.0.0-beta.4) (2024-09-21)
+
+### Features
+
+* add typescript config ([d98766f](https://github.com/nimec01/eslint-config/commit/d98766f15015f8c399c8f3dedaca4dac69993859))
+
+### Bug Fixes
+
+* resolution error ([3ee3ced](https://github.com/nimec01/eslint-config/commit/3ee3cedd020faec40f830bdd1ad611c205652d85))
+
+### Code Refactors
+
+* move @nimec/prettier-config to dependencies ([bb2fa30](https://github.com/nimec01/eslint-config/commit/bb2fa30269ff54334ff5d91289b6c3e751f3bc1f))
+
 ## [2.0.0-beta.3](https://github.com/nimec01/eslint-config/compare/v2.0.0-beta.2...v2.0.0-beta.3) (2024-09-21)
 
 ### Bug Fixes
