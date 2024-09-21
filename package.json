@@ -23,8 +23,14 @@
     "README-v1.md",
     "CHANGELOG.md"
   ],
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
