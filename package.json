@@ -40,6 +40,7 @@
   "dependencies": {
     "@cspell/eslint-plugin": "^8.14.4",
     "@eslint/js": "^9.11.0",
+    "@nimec/prettier-config": "^1.0.0",
     "eslint": "^9",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import-x": "^4.2.1",
@@ -51,7 +52,6 @@
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
-    "@nimec/prettier-config": "^1.0.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "conventional-changelog-conventionalcommits": "^8.0.0",
