@@ -1,3 +1,13 @@
+## [2.0.0-beta.5](https://github.com/nimec01/eslint-config/compare/v2.0.0-beta.4...v2.0.0-beta.5) (2024-09-21)
+
+### Features
+
+* add react config ([3d48977](https://github.com/nimec01/eslint-config/commit/3d489777e2a0e1e3c3a961158ea18bb6439da756))
+
+### Miscellaneous Chores
+
+* add husky ([5d80c72](https://github.com/nimec01/eslint-config/commit/5d80c72ca9a133474b31b952d4c500a9e4026171))
+
 ## [2.0.0-beta.4](https://github.com/nimec01/eslint-config/compare/v2.0.0-beta.3...v2.0.0-beta.4) (2024-09-21)
 
 ### Features
