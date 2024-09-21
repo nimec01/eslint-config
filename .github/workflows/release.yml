@@ -15,7 +15,7 @@ permissions:
 jobs:
   release:
     runs-on: ubuntu-latest
-    if: ${{ github.ref == 'refs/heads/main' }}
+    if: ${{ contains(fromJSON('["refs/heads/main","refs/heads/beta"]'),github.ref) }}
 
     steps:
       - name: Checkout
