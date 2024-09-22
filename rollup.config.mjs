@@ -1,3 +1,5 @@
+import copy from 'rollup-plugin-copy';
+
 /** @type {import("rollup").RollupOptions} */
 export default {
   input: './src/index.js',
@@ -26,5 +28,10 @@ export default {
     'eslint-plugin-react-hooks',
     'eslint-plugin-jsx-a11y',
     'eslint-plugin-react-refresh',
+  ],
+  plugins: [
+    copy({
+      targets: [{ src: 'src/*.json', dest: 'dist' }],
+    }),
   ],
 };
