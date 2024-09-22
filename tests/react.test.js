@@ -22,9 +22,9 @@ test('react flavor should be linted correctly', async () => {
   const results = await eslint.lintFiles(['tests/react']);
 
   expect(results).toBeDefined();
-  expect(results.length).toBe(3);
+  expect(results).toHaveLength(3);
 
-  expect(results.at(0).messages.length).toBe(6);
+  expect(results.at(0).messages).toHaveLength(6);
   expect(results.at(0).messages).toEqual(
     expect.arrayContaining([
       expect.objectContaining({
@@ -60,7 +60,7 @@ test('react flavor should be linted correctly', async () => {
     ])
   );
 
-  expect(results.at(1).messages.length).toBe(3);
+  expect(results.at(1).messages).toHaveLength(3);
   expect(results.at(1).messages).toEqual(
     expect.arrayContaining([
       expect.objectContaining({
@@ -81,7 +81,7 @@ test('react flavor should be linted correctly', async () => {
     ])
   );
 
-  expect(results.at(2).messages.length).toBe(4);
+  expect(results.at(2).messages).toHaveLength(4);
   expect(results.at(2).messages).toEqual(
     expect.arrayContaining([
       expect.objectContaining({

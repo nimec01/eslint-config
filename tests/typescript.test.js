@@ -21,9 +21,9 @@ test('typescript flavor should be linted correctly', async () => {
   const results = await eslint.lintFiles(['tests/typescript']);
 
   expect(results).toBeDefined();
-  expect(results.length).toBe(2);
+  expect(results).toHaveLength(2);
 
-  expect(results.at(0).messages.length).toBe(10);
+  expect(results.at(0).messages).toHaveLength(10);
   expect(results.at(0).messages).toEqual(
     expect.arrayContaining([
       expect.objectContaining({
@@ -79,7 +79,7 @@ test('typescript flavor should be linted correctly', async () => {
     ])
   );
 
-  expect(results.at(1).messages.length).toBe(8);
+  expect(results.at(1).messages).toHaveLength(8);
   expect(results.at(1).messages).toEqual(
     expect.arrayContaining([
       expect.objectContaining({
