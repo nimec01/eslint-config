@@ -1,3 +1,20 @@
+## [2.0.0-beta.6](https://github.com/nimec01/eslint-config/compare/v2.0.0-beta.5...v2.0.0-beta.6) (2024-09-22)
+
+### Features
+
+* add airbnb base config ([a375426](https://github.com/nimec01/eslint-config/commit/a3754265b0f679327f28c2614266ad7dbd97fab8))
+* add react and typescript airbnb rules ([dc85f86](https://github.com/nimec01/eslint-config/commit/dc85f86a6dcfcda0fcce925c960095a827f77668))
+
+### Bug Fixes
+
+* hopefully fix tests ([a6f54cb](https://github.com/nimec01/eslint-config/commit/a6f54cb589b680d70a5ea0c88fe7e06dea9247fe))
+
+### Miscellaneous Chores
+
+* move react tests to ts ([d6d8653](https://github.com/nimec01/eslint-config/commit/d6d8653768739cdf600448611cb195082771f6bf))
+* switch to toHaveLength ([7af9f42](https://github.com/nimec01/eslint-config/commit/7af9f4217d139083217d497493c57b76ea162214))
+* update test ([b6854d9](https://github.com/nimec01/eslint-config/commit/b6854d90a8aa2c1276cfc79e4b2a02f56e42d0ac))
+
 ## [2.0.0-beta.5](https://github.com/nimec01/eslint-config/compare/v2.0.0-beta.4...v2.0.0-beta.5) (2024-09-21)
 
 ### Features
