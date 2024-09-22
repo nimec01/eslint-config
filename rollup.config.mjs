@@ -20,5 +20,11 @@ export default {
     'eslint-plugin-import-x',
     '@cspell/eslint-plugin',
     'eslint-plugin-prettier/recommended',
+    'node:module',
+    'typescript-eslint',
+    'eslint-plugin-react',
+    'eslint-plugin-react-hooks',
+    'eslint-plugin-jsx-a11y',
+    'eslint-plugin-react-refresh',
   ],
 };
