@@ -1,3 +1,13 @@
+## [2.0.0-beta.7](https://github.com/nimec01/eslint-config/compare/v2.0.0-beta.6...v2.0.0-beta.7) (2024-09-22)
+
+### Bug Fixes
+
+* add json files ([f3efcbf](https://github.com/nimec01/eslint-config/commit/f3efcbfdf8561e20b6551674a1d159e9b48ea3cf))
+
+### Miscellaneous Chores
+
+* update rollup config ([8a4c34c](https://github.com/nimec01/eslint-config/commit/8a4c34cbf1ac43a5d8e661da47423676852b0414))
+
 ## [2.0.0-beta.6](https://github.com/nimec01/eslint-config/compare/v2.0.0-beta.5...v2.0.0-beta.6) (2024-09-22)
 
 ### Features
