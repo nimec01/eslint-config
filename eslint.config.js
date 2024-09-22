@@ -10,4 +10,9 @@ export default [
       '**/dist',
     ],
   },
+  {
+    rules: {
+      'import-x/extensions': 'off',
+    },
+  },
 ];

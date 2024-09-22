@@ -6,6 +6,11 @@ import prettierConfigRecommended from 'eslint-plugin-prettier/recommended';
 import sonarjs from 'eslint-plugin-sonarjs';
 import unicorn from 'eslint-plugin-unicorn';
 import globals from 'globals';
+import { createRequire } from 'node:module';
+
+const airbnbBaseRules = createRequire(import.meta.url)(
+  './airbnb-base-rules.json'
+);
 
 export default [
   eslint.configs.recommended,
@@ -55,14 +60,22 @@ export default [
     settings: {
       'import-x/resolver': {
         node: {
-          extensions: ['.js', '.cjs', '.mjs'],
+          extensions: ['.js', '.cjs', '.mjs', '.jsx', '.json'],
           moduleDirectory: ['node_modules', 'src'],
         },
         typescript: {
-          extensions: ['.js', '.jsx', '.ts', '.tsx'],
+          extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
           moduleDirectory: ['node_modules', 'src'],
         },
       },
+      'import-x/ignore': [
+        'node_modules',
+        String.raw`\.coffee`,
+        String.raw`\.(scss|css|less)`,
+        String.raw`\.json`,
+        String.raw`\.hbs`,
+        String.raw`\.svg`,
+      ],
     },
   },
   // prettier
@@ -72,8 +85,11 @@ export default [
    */
   {
     rules: {
-      'no-console': 'error',
-      'import-x/first': 'error',
+      ...airbnbBaseRules,
+      'import-x/prefer-default-export': 'off',
+
+      // unicorn plugin
+      'unicorn/no-useless-undefined': 'off',
     },
   },
 ];

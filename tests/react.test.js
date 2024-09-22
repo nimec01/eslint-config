@@ -14,7 +14,7 @@ test('react flavor should be linted correctly', async () => {
   expect(results).toBeDefined();
   expect(results.length).toBe(3);
 
-  expect(results.at(0).messages.length).toBe(5);
+  expect(results.at(0).messages.length).toBe(6);
   expect(results.at(0).messages).toEqual(
     expect.arrayContaining([
       expect.objectContaining({
@@ -36,6 +36,11 @@ test('react flavor should be linted correctly', async () => {
         ruleId: 'unicorn/no-anonymous-default-export',
         line: 1,
         column: 24,
+      }),
+      expect.objectContaining({
+        ruleId: 'arrow-body-style',
+        line: 1,
+        column: 27,
       }),
       expect.objectContaining({
         ruleId: 'sonarjs/jsx-no-useless-fragment',
