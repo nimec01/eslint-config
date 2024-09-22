@@ -64,7 +64,16 @@ export default [
           moduleDirectory: ['node_modules', 'src'],
         },
         typescript: {
-          extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+          extensions: [
+            '.js',
+            '.cjs',
+            '.mjs',
+            '.jsx',
+            '.json',
+            '.ts',
+            '.tsx',
+            '.d.ts',
+          ],
           moduleDirectory: ['node_modules', 'src'],
         },
       },

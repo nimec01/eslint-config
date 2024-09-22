@@ -1,9 +1,13 @@
-import baseConfig from './base.js';
-
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+import { createRequire } from 'node:module';
+import baseConfig from './base.js';
+
+const airbnbReactRules = createRequire(import.meta.url)(
+  './airbnb-react-rules.json'
+);
 
 export default [
   ...baseConfig,
@@ -18,16 +22,24 @@ export default [
     settings: {
       react: {
         version: 'detect',
+        pragma: 'React',
       },
+      propWrapperFunctions: ['forbidExtraProps', 'exact', 'Object.freeze'],
     },
     plugins: {
       'react-hooks': reactHooks,
-      react: react,
+      react,
     },
     rules: {
       ...react.configs.flat.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+      ...airbnbReactRules,
       'react/react-in-jsx-scope': 'off',
+      'react/jsx-filename-extension': [
+        'error',
+        { extensions: ['.jsx', '.tsx'] },
+      ],
+      'sonarjs/jsx-no-useless-fragment': 'off',
     },
   },
   {

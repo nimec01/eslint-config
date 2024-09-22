@@ -5,7 +5,17 @@ import config from '../src/index';
 test('react flavor should be linted correctly', async () => {
   const eslint = new ESLint({
     overrideConfigFile: true,
-    overrideConfig: [...config.configs.typescript, ...config.configs.react],
+    overrideConfig: [
+      ...config.configs.typescript,
+      ...config.configs.react,
+      {
+        languageOptions: {
+          parserOptions: {
+            project: './tests/react/tsconfig.json',
+          },
+        },
+      },
+    ],
     fix: false,
   });
 
@@ -23,7 +33,7 @@ test('react flavor should be linted correctly', async () => {
         column: 1,
       }),
       expect.objectContaining({
-        ruleId: 'react/display-name',
+        ruleId: 'react/function-component-definition',
         line: 1,
         column: 16,
       }),
@@ -43,16 +53,21 @@ test('react flavor should be linted correctly', async () => {
         column: 27,
       }),
       expect.objectContaining({
-        ruleId: 'sonarjs/jsx-no-useless-fragment',
+        ruleId: 'react/jsx-no-useless-fragment',
         line: 2,
         column: 10,
       }),
     ])
   );
 
-  expect(results.at(1).messages.length).toBe(2);
+  expect(results.at(1).messages.length).toBe(3);
   expect(results.at(1).messages).toEqual(
     expect.arrayContaining([
+      expect.objectContaining({
+        ruleId: 'sonarjs/sonar-prefer-read-only-props',
+        line: 7,
+        column: 30,
+      }),
       expect.objectContaining({
         ruleId: 'no-console',
         line: 9,
@@ -66,7 +81,7 @@ test('react flavor should be linted correctly', async () => {
     ])
   );
 
-  expect(results.at(2).messages.length).toBe(2);
+  expect(results.at(2).messages.length).toBe(4);
   expect(results.at(2).messages).toEqual(
     expect.arrayContaining([
       expect.objectContaining({
@@ -77,6 +92,16 @@ test('react flavor should be linted correctly', async () => {
       expect.objectContaining({
         ruleId: 'sonarjs/no-empty-function',
         line: 1,
+        column: 26,
+      }),
+      expect.objectContaining({
+        ruleId: 'react/function-component-definition',
+        line: 2,
+        column: 20,
+      }),
+      expect.objectContaining({
+        ruleId: 'react/jsx-no-useless-fragment',
+        line: 2,
         column: 26,
       }),
     ])

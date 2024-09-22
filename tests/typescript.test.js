@@ -5,7 +5,16 @@ import config from '../src/index';
 test('typescript flavor should be linted correctly', async () => {
   const eslint = new ESLint({
     overrideConfigFile: true,
-    overrideConfig: config.configs.typescript,
+    overrideConfig: [
+      ...config.configs.typescript,
+      {
+        languageOptions: {
+          parserOptions: {
+            project: './tests/typescript/tsconfig.json',
+          },
+        },
+      },
+    ],
     fix: false,
   });
 

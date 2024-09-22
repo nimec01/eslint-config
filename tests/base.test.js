@@ -79,11 +79,6 @@ test('base flavor should be linted correctly', async () => {
         column: 1,
       }),
       expect.objectContaining({
-        ruleId: 'import-x/default',
-        line: 3,
-        column: 8,
-      }),
-      expect.objectContaining({
         ruleId: 'no-unused-vars',
         line: 3,
         column: 8,
