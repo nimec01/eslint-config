@@ -97,8 +97,22 @@ export default [
       ...airbnbBaseRules,
       'import-x/prefer-default-export': 'off',
 
+      // cspell plugin
+      '@cspell/spellchecker': [
+        'error',
+        {
+          cspell: {
+            words: ['nimec'],
+          },
+        },
+      ],
+
       // unicorn plugin
       'unicorn/no-useless-undefined': 'off',
+
+      // sonarjs plugin
+      'sonarjs/todo-tag': 'off',
+      'sonarjs/no-misused-promises': 'off',
     },
   },
 ];

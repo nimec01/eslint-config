@@ -39,6 +39,8 @@ export default [
         'error',
         { extensions: ['.jsx', '.tsx'] },
       ],
+      'react/jsx-one-expression-per-line': 'off',
+      'react/jsx-props-no-spreading': 'off',
       'sonarjs/jsx-no-useless-fragment': 'off',
     },
   },
