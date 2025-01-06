@@ -58,6 +58,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        with:
+          additional-packages: |
+            ['@semantic-release/changelog','@semantic-release/git']
 
       - name: Test step
         if: steps.release.outputs.new-release-published == 'true' && steps.release.outputs.type != 'prerelease'
