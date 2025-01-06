@@ -79,12 +79,6 @@
   "@typescript-eslint/no-implied-eval": [
     "error"
   ],
-  "no-loss-of-precision": [
-    "off"
-  ],
-  "@typescript-eslint/no-loss-of-precision": [
-    "error"
-  ],
   "no-loop-func": [
     "off"
   ],

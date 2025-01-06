@@ -362,9 +362,6 @@
   "symbol-description": [
     "error"
   ],
-  "template-curly-spacing": [
-    "error"
-  ],
   "init-declarations": [
     "off"
   ],
@@ -730,9 +727,6 @@
     "error"
   ],
   "no-irregular-whitespace": [
-    "error"
-  ],
-  "no-loss-of-precision": [
     "error"
   ],
   "no-misleading-character-class": [
