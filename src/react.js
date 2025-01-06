@@ -44,16 +44,17 @@ export default [
       'sonarjs/jsx-no-useless-fragment': 'off',
     },
   },
-  {
-    files: ['**/*.{jsx,tsx}'],
-    plugins: {
-      'react-refresh': reactRefresh,
-    },
-    rules: {
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
-    },
-  },
+  reactRefresh.configs.recommended,
+  // {
+  //   files: ['**/*.{jsx,tsx}'],
+  //   plugins: {
+  //     'react-refresh': reactRefresh,
+  //   },
+  //   rules: {
+  //     'react-refresh/only-export-components': [
+  //       'warn',
+  //       { allowConstantExport: true },
+  //     ],
+  //   },
+  // },
 ];

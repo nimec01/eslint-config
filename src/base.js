@@ -113,6 +113,7 @@ export default [
       // sonarjs plugin
       'sonarjs/todo-tag': 'off',
       'sonarjs/no-misused-promises': 'off',
+      'sonarjs/no-hardcoded-secrets': 'off',
     },
   },
 ];

@@ -64,7 +64,7 @@ test('react flavor should be linted correctly', async () => {
   expect(results.at(1).messages).toEqual(
     expect.arrayContaining([
       expect.objectContaining({
-        ruleId: 'sonarjs/sonar-prefer-read-only-props',
+        ruleId: 'sonarjs/prefer-read-only-props',
         line: 7,
         column: 30,
       }),
@@ -81,18 +81,13 @@ test('react flavor should be linted correctly', async () => {
     ])
   );
 
-  expect(results.at(2).messages).toHaveLength(4);
+  expect(results.at(2).messages).toHaveLength(3);
   expect(results.at(2).messages).toEqual(
     expect.arrayContaining([
       expect.objectContaining({
         ruleId: 'react-refresh/only-export-components',
         line: 1,
         column: 14,
-      }),
-      expect.objectContaining({
-        ruleId: 'sonarjs/no-empty-function',
-        line: 1,
-        column: 26,
       }),
       expect.objectContaining({
         ruleId: 'react/function-component-definition',
