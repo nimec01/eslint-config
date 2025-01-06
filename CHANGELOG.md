@@ -1,3 +1,18 @@
+## [2.0.0-beta.8](https://github.com/nimec01/eslint-config/compare/v2.0.0-beta.7...v2.0.0-beta.8) (2025-01-06)
+
+### Features
+
+* update rules ([e397206](https://github.com/nimec01/eslint-config/commit/e39720668ca2b4783df1b233f70acfc32787403e))
+
+### Bug Fixes
+
+* upgrade dependencies ([17f05fd](https://github.com/nimec01/eslint-config/commit/17f05fd132c97fdf26c4e29dd4d74ac46576e848))
+
+### Miscellaneous Chores
+
+* update allowed words ([c253ca7](https://github.com/nimec01/eslint-config/commit/c253ca74c15a70d7b8beab69cde4d4639a8fda4e))
+* update peer dependency ranges ([de5029a](https://github.com/nimec01/eslint-config/commit/de5029a927a4e595809a46547f37fb2ba28c4406))
+
 ## [2.0.0-beta.7](https://github.com/nimec01/eslint-config/compare/v2.0.0-beta.6...v2.0.0-beta.7) (2024-09-22)
 
 ### Bug Fixes
