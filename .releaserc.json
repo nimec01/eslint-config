@@ -82,6 +82,10 @@
               "type": "improvement",
               "section": "Improvements",
               "hidden": false
+            },
+            {
+              "type": "release",
+              "hidden": true
             }
           ]
         }
