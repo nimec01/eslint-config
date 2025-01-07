@@ -2,56 +2,23 @@
 
 > This is my personal [ESLint](https://eslint.org) config. Feel free to use it if you want.
 
-## Flavors
+ESLint v9 is supported as of version 2.0.0.
+If you are interested in the documentation of the legacy config take a look at this [README](./README-v1.md)
 
-You need to install some peer dependencies based on the flavor that you want to use. Depending on your package manager, you have to install them yourself.
+## Used plugins and configs
 
-### `base` - Javascript Only
-
-**Included Configs:**
-
-- eslint-config-airbnb-base
 - eslint-config-prettier
-
-**Included Plugins:**
-
-- eslint-plugin-import
-- eslint-plugin-no-secrets
 - eslint-plugin-prettier
+- eslint-plugin-import-x
+- eslint-plugin-no-secrets
 - eslint-plugin-sonarjs
 - eslint-plugin-unicorn
-- eslint-plugin-unused-imports
-- @cspell/eslint-plugin
+- eslint-plugin-jsx-a11y (only required for the react config)
+- eslint-plugin-react (only required for the react config)
+- eslint-plugin-react-hook (only required for the react config)
+- eslint-plugin-react-refresh (only required for the react config)
 
-### `react` - React using Javascript Only
-
-**Required Configs:**
-
-- eslint-config-airbnb
-
-**Required Plugins**:
-
-- eslint-plugin-react
-- eslint-plugin-react-hooks
-- eslint-plugin-jsx-a11y
-
-### `typescript` - Typescript support
-
-**Required Package:**
-
-- @typescript-eslint/parser
-
-**Required Plugins**:
-
-- @typescript-eslint/eslint-plugin
-
-### `react-typescript` - React using Typescript
-
-**To use this you also need to install all packages/configs/plugins which are required for the 'react' and 'typescript' flavors**.
-
-**Required Configs:**
-
-- eslint-config-airbnb-typescript
+This config also includes remnants of the Airbnb config.
 
 ## Installation
 
@@ -87,93 +54,37 @@ pnpm add -D eslint @nimec/eslint-config
 npx install-peerdeps --pnpm -D @nimec/eslint-config
 ```
 
-## Extending this config
+## Usage
 
-### Without specifying a flavor
+This package provides several prebuilt configs:
+- base
+- typescript
+- react
 
-Update your `.eslintrc` to extend this config. This will automatically determine your environment and select the corresponding flavor.
-
-```plain
-{
-  ...,
-  "extends": [
-    ...,
-    "@nimec/eslint-config"
-  ],
-  ...
-}
-```
-
-### Specifying a flavor
-
-Update your `.eslintrc` to extend this config.
-
-```plain
-{
-  ...,
-  "extends": [
-    ...,
-    "@nimec/eslint-config/<flavor>"
-  ],
-  ...
-}
-```
-
-### Using `createConfig`
-
-You can use the `createConfig` function exported by `@nimec/eslint-config/lib/utils` to generate a customized function. You can use the following settings to customize the result:
-
-| Property          | Allowed values / type              | Default value | Description                                                                                                                                                          |
-| --- | --- | --- | --- 
-| typescript        | `true`, `false`                    | `false`       | Generate a config optimized for typescript                                                                                                                           |
-| react             | `true`, `false`                    | `false`       | Generate a config optimized for react                                                                                                                                |
-| prettier          | `true`, `false`                    | `true`        | Include `prettier`                                                                                                                                                   |
-| ignoreConfigs     | `String[]`                         | `[]`          | Ignore default config(s)                                                                                                                                             |
-| ignorePlugins     | `String[]`                         | `[]`          | Ignore default plugin(s)                                                                                                                                             |
-| ignoreRules       | `String[]`                         | `[]`          | Ignore default rule(s)                                                                                                                                               |
-| extraConfigs      | `String[]`                         | `[]`          | Config(s) to include                                                                                                                                                 |
-| extraPlugins      | `String[]`                         | `[]`          | Plugin(s) to include                                                                                                                                                 |
-| extraRules        | `{[key: String]: any}`              | `{}`          | Rule(s) to include                                                                                                                                                   |
-| overrideConfigs   | `String[]`, `undefined`            | `undefined`   | Override config(s)                                                                                                                                                   |
-| overridePlugins   | `String[]`, `undefined`            | `undefined`   | Override plugin(s)                                                                                                                                                   |
-| overrideRules     | `{[key: String]: any}`, `undefined` | `undefined`   | Override rule(s)                                                                                                                                                     |     |
-| overrideWipeRules | `true`, `false`                    | `false`       | Determines whether `overrideRules` keeps all rules not present in `overrideRules` or not. Setting this to `true` will only include rules present in `overrideRules`. |
-
-Example: Default config without `prettier`
-
+Example:
 ```js
-const { createConfig } = require('@nimec/eslint-config/lib/utils');
+import nimec from '@nimec/eslint-config';
 
-module.exports = createConfig({
-  prettier: false,
-});
-```
-
-## Flavor specific configuration
-
-### typescript / react-typescript
-
-When using one of these flavors, you need to add the `parserOptions` key to your eslint config. Here is an example:
-
-```plain
-{
-  ...,
-  "parserOptions": {
-    "ecmaVersion": 2022,
-    "project": "./tsconfig.json"
+/** @type {import("eslint").Linter.Config[]} */
+export default [
+  ...nimec.configs.typescript,
+  ...nimec.configs.react,
+  {
+    ignores: ['node_modules'],
   },
-  "extends": [
-    ...,
-    "@nimec/eslint-config/typescript"
-  ],
-  ...
-}
+  {
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      parserOptions: {
+        project: './tsconfig.lint.json',
+      },
+    },
+  },
+  {
+    rules: {
+      // Custom rule overrides
+    },
+  },
+];
 ```
-
-## FAQ
-
-### How does this config determine which flavor to select?
-
-React: The config checks whether the package `react` is installed or not.
-
-Typescript: The config checks whether a `tsconfig.json` exists in the same directory as the eslint config.

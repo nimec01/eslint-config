@@ -1,6 +1,0 @@
-.eslint*
-test/
-.vscode/
-.github/
-.releaserc.json
-renovate.json

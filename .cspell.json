@@ -1,0 +1,10 @@
+{
+  "dictionaries": ["custom"],
+  "dictionaryDefinitions": [
+    {
+      "name": "custom",
+      "path": "./.github/spelling/custom.txt",
+      "addWords": true
+    }
+  ]
+}

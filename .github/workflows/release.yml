@@ -1,37 +1,78 @@
-name: Release
+name: Lint, Test and Release
 
 on:
-  workflow_dispatch:
-  workflow_run:
-    workflows: ['Test']
-    types:
-      - completed
+  push:
 
-permissions:
-  contents: write
-  issues: write
-  pull-requests: write
+env:
+  CI: true
+  HUSKY: 0
+
+permissions: read-all
 
 jobs:
-  release:
+  test:
     runs-on: ubuntu-latest
-    if: ${{ contains(fromJSON('["refs/heads/main","refs/heads/beta"]'),github.ref) }}
-
+    permissions:
+      contents: read
+    strategy:
+      matrix:
+        node-version: [22]
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup node environment
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
+      - name: Setup Node v${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
-          node-version: latest
-          check-latest: true
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Run tests
+        run: pnpm test
+
+  release:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      issues: write
+      pull-requests: write
+    strategy:
+      matrix:
+        node-version: [22]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
+      - name: Setup Node v${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm build
 
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
+        run: pnpm semantic-release
