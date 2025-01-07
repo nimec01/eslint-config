@@ -1,3 +1,20 @@
+## [2.0.0-beta.9](https://github.com/nimec01/eslint-config/compare/v2.0.0-beta.8...v2.0.0-beta.9) (2025-01-07)
+
+### Bug Fixes
+
+* release workflow ([576a17e](https://github.com/nimec01/eslint-config/commit/576a17e13e5b69875d8259ac117b71a12f45d2db))
+* release workflow v2 ([289071c](https://github.com/nimec01/eslint-config/commit/289071c0c83fd474b90e27017814d99059e4e61a))
+* remove deprecated rules ([a47dd67](https://github.com/nimec01/eslint-config/commit/a47dd67b776baee3edfb644fee5d3dffe66b48bd))
+* revert new workflow ([2439d93](https://github.com/nimec01/eslint-config/commit/2439d93e70046ce7c3d26e32a6bc3f1de30a09a8))
+* workflow permissions ([cac7d4b](https://github.com/nimec01/eslint-config/commit/cac7d4bdadd369e9aec72f3db676cdf8b0e1d745))
+
+### Miscellaneous Chores
+
+* add new README ([bfb6b65](https://github.com/nimec01/eslint-config/commit/bfb6b65e07ad49e9ed653b5083a0e4cc5a2d6467))
+* add package provenance ([03fc7ee](https://github.com/nimec01/eslint-config/commit/03fc7eeea4bcbb058158911d2d0118152d2e40b4))
+* remove comment ([175ec00](https://github.com/nimec01/eslint-config/commit/175ec0032e05a31a8fc2171c5ec417c0dd7a937a))
+* use new release workflow ([6a5f8c8](https://github.com/nimec01/eslint-config/commit/6a5f8c80ad7b381b307971b93a91b6ff2d7e48e0))
+
 ## [2.0.0-beta.8](https://github.com/nimec01/eslint-config/compare/v2.0.0-beta.7...v2.0.0-beta.8) (2025-01-06)
 
 ### Features
