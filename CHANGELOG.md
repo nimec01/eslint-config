@@ -1,3 +1,13 @@
+## [2.0.0-beta.10](https://github.com/nimec01/eslint-config/compare/v2.0.0-beta.9...v2.0.0-beta.10) (2025-01-07)
+
+### Bug Fixes
+
+* update workflow permissions ([2003953](https://github.com/nimec01/eslint-config/commit/200395357c8023ef81f02d41fa78f75fd4773cad))
+
+### Miscellaneous Chores
+
+* fix npm package json ([334b5fa](https://github.com/nimec01/eslint-config/commit/334b5fa1ebb457b13f7c984ef56f95fd8092277a))
+
 ## [2.0.0-beta.9](https://github.com/nimec01/eslint-config/compare/v2.0.0-beta.8...v2.0.0-beta.9) (2025-01-07)
 
 ### Bug Fixes
