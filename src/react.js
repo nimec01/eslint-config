@@ -45,16 +45,4 @@ export default [
     },
   },
   reactRefresh.configs.recommended,
-  // {
-  //   files: ['**/*.{jsx,tsx}'],
-  //   plugins: {
-  //     'react-refresh': reactRefresh,
-  //   },
-  //   rules: {
-  //     'react-refresh/only-export-components': [
-  //       'warn',
-  //       { allowConstantExport: true },
-  //     ],
-  //   },
-  // },
 ];
