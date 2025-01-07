@@ -49,22 +49,28 @@ jobs:
         node-version: [22]
     permissions:
       id-token: write
-      contents: write
-      issues: write
-      pull-requests: write
     steps:
       - uses: actions/checkout@v4
 
-      - name: 'Release'
-        uses: codfish/semantic-release-action@v3
-        id: release
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
+      - name: Setup Node v${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm build
+
+      - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        with:
-          additional-packages: |
-            ['@semantic-release/changelog','@semantic-release/git']
-
-      - name: Test step
-        if: steps.release.outputs.new-release-published == 'true' && steps.release.outputs.type != 'prerelease'
-        run: echo "New release published!"
+        run: pnpm semantic-release
