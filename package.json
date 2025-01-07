@@ -13,7 +13,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nimec01/eslint-config.git"
+    "url": "git+https://github.com/nimec01/eslint-config.git"
   },
   "publishConfig": {
     "access": "public",
