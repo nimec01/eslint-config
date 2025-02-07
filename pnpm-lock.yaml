@@ -28,7 +28,7 @@ importers:
         version: 4.6.1(eslint@9.19.0)(typescript@5.7.3)
       eslint-plugin-no-secrets:
         specifier: ^2.1.1
-        version: 2.1.1(eslint@9.19.0)
+        version: 2.2.1(eslint@9.19.0)
       eslint-plugin-prettier:
         specifier: ^5.2.3
         version: 5.2.3(eslint-config-prettier@10.0.1(eslint@9.19.0))(eslint@9.19.0)(prettier@3.4.2)
@@ -2357,8 +2357,8 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9
 
-  eslint-plugin-no-secrets@2.1.1:
-    resolution: {integrity: sha512-jcxk11tA3riniLoI5UqUtrW6/nmC60pNAG1NFpXrenzAu0Hmbjxq63e27YhvNIq+exT2yMZLvCqAQ+lC/+ZWZA==}
+  eslint-plugin-no-secrets@2.2.1:
+    resolution: {integrity: sha512-/7BduEiFeINJ7mlc8iRmqp0sDw2a2lAFahig/RGppn7qf1dKhldXopUuv4M92kc4PX90dcxfKwKtYrW159cuhA==}
     engines: {node: '>=18', npm: '>=8'}
     peerDependencies:
       eslint: '>=5'
@@ -7451,7 +7451,7 @@ snapshots:
       safe-regex-test: 1.0.3
       string.prototype.includes: 2.0.1
 
-  eslint-plugin-no-secrets@2.1.1(eslint@9.19.0):
+  eslint-plugin-no-secrets@2.2.1(eslint@9.19.0):
     dependencies:
       eslint: 9.19.0
 
