@@ -1,3 +1,16 @@
+## [2.0.2](https://github.com/nimec01/eslint-config/compare/v2.0.1...v2.0.2) (2025-02-10)
+
+### Bug Fixes
+
+* naming convention rules ([7fbf7ef](https://github.com/nimec01/eslint-config/commit/7fbf7ef8c72683346face17d92d775db307ff824))
+* update rules ([2d8df41](https://github.com/nimec01/eslint-config/commit/2d8df41f6cc10fc9892b4c99325ed83eac4a92ff))
+
+### Miscellaneous Chores
+
+* **deps:** upgrade dependencies ([1ce0b4f](https://github.com/nimec01/eslint-config/commit/1ce0b4fb3d3145038f5960c89e7aad55c3112103))
+* **deps:** upgrade more dependencies ([4082395](https://github.com/nimec01/eslint-config/commit/4082395835e7f4aabafc3e4dc1109997579aa498))
+* test to print published releases ([2720c5f](https://github.com/nimec01/eslint-config/commit/2720c5f6cd1bc124fe9da4e8d1f3634eff240bbd))
+
 ## [2.0.1](https://github.com/nimec01/eslint-config/compare/v2.0.0...v2.0.1) (2025-01-30)
 
 ### Bug Fixes
