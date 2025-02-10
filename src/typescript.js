@@ -40,7 +40,7 @@ export default tsEslint.config(...baseConfig, ...tsEslint.configs.recommended, {
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
-        varsIgnorePattern: '_*',
+        varsIgnorePattern: '^_*$',
       },
     ],
   },

@@ -42,6 +42,42 @@ export default [
       'react/jsx-one-expression-per-line': 'off',
       'react/jsx-props-no-spreading': 'off',
       'sonarjs/jsx-no-useless-fragment': 'off',
+      '@typescript-eslint/naming-convention': [
+        'error',
+        {
+          selector: 'default',
+          format: ['camelCase'],
+          leadingUnderscore: 'allow',
+          trailingUnderscore: 'allow',
+        },
+
+        {
+          selector: 'import',
+          format: ['camelCase', 'PascalCase'],
+        },
+
+        {
+          selector: 'variableLike',
+          format: ['camelCase', 'UPPER_CASE'],
+          leadingUnderscore: 'allow',
+          trailingUnderscore: 'allow',
+        },
+
+        {
+          selector: 'typeLike',
+          format: ['PascalCase'],
+        },
+        {
+          selector: 'function',
+          modifiers: ['exported'],
+          format: ['camelCase', 'PascalCase'],
+        },
+        {
+          selector: 'variable',
+          modifiers: ['exported'],
+          format: ['camelCase', 'PascalCase'],
+        },
+      ],
     },
   },
   reactRefresh.configs.recommended,
