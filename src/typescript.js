@@ -10,5 +10,38 @@ const airbnbTSRules = createRequire(import.meta.url)(
 export default tsEslint.config(...baseConfig, ...tsEslint.configs.recommended, {
   rules: {
     ...airbnbTSRules,
+
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        selector: 'default',
+        format: ['camelCase'],
+        leadingUnderscore: 'allow',
+        trailingUnderscore: 'allow',
+      },
+
+      {
+        selector: 'import',
+        format: ['camelCase', 'PascalCase'],
+      },
+
+      {
+        selector: 'variableLike',
+        format: ['camelCase', 'UPPER_CASE'],
+        leadingUnderscore: 'allow',
+        trailingUnderscore: 'allow',
+      },
+
+      {
+        selector: 'typeLike',
+        format: ['PascalCase'],
+      },
+    ],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        varsIgnorePattern: '_*',
+      },
+    ],
   },
 });

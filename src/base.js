@@ -95,7 +95,10 @@ export default [
   {
     rules: {
       ...airbnbBaseRules,
-      'import-x/prefer-default-export': 'off',
+
+      'max-classes-per-file': 'off',
+      'no-restricted-syntax': 'off',
+      'class-methods-use-this': 'off',
 
       // cspell plugin
       '@cspell/spellchecker': [
@@ -109,11 +112,21 @@ export default [
 
       // unicorn plugin
       'unicorn/no-useless-undefined': 'off',
+      'unicorn/no-array-for-each': 'off',
 
       // sonarjs plugin
       'sonarjs/todo-tag': 'off',
       'sonarjs/no-misused-promises': 'off',
       'sonarjs/no-hardcoded-secrets': 'off',
+      'sonarjs/no-unused-vars': 'off',
+
+      // import-x plugin
+      'import-x/prefer-default-export': 'off',
+      'import-x/no-extraneous-dependencies': 'off',
+      'import-x/extensions': [
+        'error',
+        { extensions: ['.js', '.jsx', '.ts', '.tsx', '.svelte'] },
+      ],
     },
   },
 ];
