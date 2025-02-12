@@ -94,13 +94,7 @@
     "@semantic-release/changelog",
     "@semantic-release/npm",
     "@semantic-release/github",
-    "@semantic-release/git",
-    [
-      "@semantic-release/exec",
-      {
-        "successCmd": "echo \"${JSON.stringify(releases)}||||${JSON.stringify(nextRelease)}\" > .releases"
-      }
-    ]
+    "@semantic-release/git"
   ],
   "ci": false
 }
