@@ -4,10 +4,9 @@
     "config:recommended",
     ":dependencyDashboard",
     ":enableVulnerabilityAlertsWithLabel('security')",
-    "group:recommended",
+    "group:allNonMajor",
+    "helpers:pinGitHubActionDigests",
     "npm:unpublishSafe"
   ],
-  "addLabels": [
-    "dependencies"
-  ]
+  "addLabels": ["dependencies"]
 }
