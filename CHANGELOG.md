@@ -1,3 +1,16 @@
+## [2.0.3](https://github.com/nimec01/eslint-config/compare/v2.0.2...v2.0.3) (2025-02-24)
+
+### Bug Fixes
+
+* **deps:** upgrade dependencies ([d94cc79](https://github.com/nimec01/eslint-config/commit/d94cc7939582bae56a4d4e88bf1b1b302a942f0b))
+
+### Miscellaneous Chores
+
+* remove eslint-import-resolver-typescript from peerDependencies ([03f083e](https://github.com/nimec01/eslint-config/commit/03f083ef2688ce7c300d4a76cc5da25d82ce42ef))
+* remove test output ([bb98b1f](https://github.com/nimec01/eslint-config/commit/bb98b1f13fd31de52988feea5de83d5e29202869))
+* update renovate config ([f0ab3b1](https://github.com/nimec01/eslint-config/commit/f0ab3b12c8ce86a8b73a50ab7df4f859f83fd681))
+* update test release output ([a1b7bcb](https://github.com/nimec01/eslint-config/commit/a1b7bcbf1059fb9d6543b0daca7c26fe8b4c8844))
+
 ## [2.0.2](https://github.com/nimec01/eslint-config/compare/v2.0.1...v2.0.2) (2025-02-10)
 
 ### Bug Fixes
