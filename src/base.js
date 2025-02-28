@@ -99,6 +99,13 @@ export default [
       'max-classes-per-file': 'off',
       'no-restricted-syntax': 'off',
       'class-methods-use-this': 'off',
+      'no-unused-vars': [
+        'error',
+        {
+          varsIgnorePattern: '^_*$',
+          argsIgnorePattern: '^_*$',
+        },
+      ],
 
       // cspell plugin
       '@cspell/spellchecker': [

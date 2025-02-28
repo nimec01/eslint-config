@@ -41,6 +41,7 @@ export default tsEslint.config(...baseConfig, ...tsEslint.configs.recommended, {
       'error',
       {
         varsIgnorePattern: '^_*$',
+        argsIgnorePattern: '^_*$',
       },
     ],
   },
