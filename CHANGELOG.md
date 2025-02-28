@@ -1,3 +1,16 @@
+## [2.0.4](https://github.com/nimec01/eslint-config/compare/v2.0.3...v2.0.4) (2025-02-28)
+
+### Bug Fixes
+
+* apply same unused-vars ignore pattern ([66dfd73](https://github.com/nimec01/eslint-config/commit/66dfd7376e575f72cd4ab60199670efeb6da198b))
+* mark eslint-import-resolver-typescript as production dependency ([6048e12](https://github.com/nimec01/eslint-config/commit/6048e1227032a1470bc9bc3c2923155aae708725))
+* update lockfile ([5162e45](https://github.com/nimec01/eslint-config/commit/5162e4534684f35b365107b2ae71e9af3d11021e))
+
+### Miscellaneous Chores
+
+* **deps:** pin dependencies ([18e357f](https://github.com/nimec01/eslint-config/commit/18e357f03d09a4f3e1d854f4b71405ad4c0e0e61))
+* pin dependencies ([22d138b](https://github.com/nimec01/eslint-config/commit/22d138bf0ace00a42e48c18e30bf359d8df52440))
+
 ## [2.0.3](https://github.com/nimec01/eslint-config/compare/v2.0.2...v2.0.3) (2025-02-24)
 
 ### Bug Fixes
