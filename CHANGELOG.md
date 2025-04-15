@@ -1,3 +1,17 @@
+## [2.0.5](https://github.com/nimec01/eslint-config/compare/v2.0.4...v2.0.5) (2025-04-15)
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([b1d6ab1](https://github.com/nimec01/eslint-config/commit/b1d6ab10b454e7b9c701f87a989b2df94f0414c0))
+
+### Miscellaneous Chores
+
+* **deps:** pin pnpm/action-setup action to a7487c7 ([b7b536c](https://github.com/nimec01/eslint-config/commit/b7b536ca43d7943ecbc71dfd3e8bb897e6091af5))
+* **deps:** update actions/setup-node digest to 49933ea ([7c6e75d](https://github.com/nimec01/eslint-config/commit/7c6e75d837b0aa8e46c4d08acbd3755572688353))
+* **deps:** update dependency eslint-import-resolver-typescript to v4 ([22872f8](https://github.com/nimec01/eslint-config/commit/22872f83f443c50602ff0f245645debfbf6e1ea7))
+* **deps:** update dependency eslint-plugin-unicorn to v58 ([b2b223b](https://github.com/nimec01/eslint-config/commit/b2b223bf727586df391d659f63abdbee05bdba71))
+* **deps:** update pnpm-lock ([25d9493](https://github.com/nimec01/eslint-config/commit/25d94932d3f703acc51ce0358f7f65a42cd60a2c))
+
 ## [2.0.4](https://github.com/nimec01/eslint-config/compare/v2.0.3...v2.0.4) (2025-02-28)
 
 ### Bug Fixes
