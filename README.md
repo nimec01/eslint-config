@@ -2,6 +2,9 @@
 
 > This is my personal [ESLint](https://eslint.org) config. Feel free to use it if you want.
 
+> [!CAUTION]
+> This project is now deprecated and should not be used anymore.
+
 ESLint v9 is supported as of version 2.0.0.
 If you are interested in the documentation of the legacy config take a look at this [README](./README-v1.md)
 
